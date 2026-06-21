@@ -1821,6 +1821,7 @@
     "nets": {
       "HeartBeat_wrapper_0_heartbeat_output": {
         "ports": [
+          "HeartBeat_wrapper_0/heartbeat",
           "UF1_LED"
         ]
       },
