@@ -21,3 +21,7 @@ set_property -dict { PACKAGE_PIN AF13 IOSTANDARD LVCMOS33 } [get_ports {ADC_SPI_
 # User defined LED
 set_property -dict { PACKAGE_PIN F8 IOSTANDARD LVCMOS18 } [get_ports {UF1_LED}]
 set_property -dict { PACKAGE_PIN E8 IOSTANDARD LVCMOS18 } [get_ports {UF2_LED_tri_o[0]}]
+
+
+#fan control
+set_property -dict {PACKAGE_PIN A12 IOSTANDARD LVCMOS33} [get_ports {fan_PWM[0]}]
