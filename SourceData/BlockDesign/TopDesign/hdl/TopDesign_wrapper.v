@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Sun Jun 21 17:10:22 2026
+//Date        : Tue Jun 23 21:50:24 2026
 //Host        : mnc1 running 64-bit Ubuntu 24.04.4 LTS
 //Command     : generate_target TopDesign_wrapper.bd
 //Design      : TopDesign_wrapper
@@ -16,13 +16,15 @@ module TopDesign_wrapper
     ADC_SPI_sck_io,
     ADC_SPI_ss_io,
     UF1_LED,
-    UF2_LED_tri_o);
+    UF2_LED_tri_o,
+    fan_PWM);
   inout ADC_SPI_io0_io;
   inout ADC_SPI_io1_io;
   inout ADC_SPI_sck_io;
   inout [0:0]ADC_SPI_ss_io;
   output UF1_LED;
   output [0:0]UF2_LED_tri_o;
+  output [0:0]fan_PWM;
 
   wire ADC_SPI_io0_i;
   wire ADC_SPI_io0_io;
@@ -42,6 +44,7 @@ module TopDesign_wrapper
   wire ADC_SPI_ss_t;
   wire UF1_LED;
   wire [0:0]UF2_LED_tri_o;
+  wire [0:0]fan_PWM;
 
   IOBUF ADC_SPI_io0_iobuf
        (.I(ADC_SPI_io0_o),
@@ -77,5 +80,6 @@ module TopDesign_wrapper
         .ADC_SPI_ss_o(ADC_SPI_ss_o_0),
         .ADC_SPI_ss_t(ADC_SPI_ss_t),
         .UF1_LED(UF1_LED),
-        .UF2_LED_tri_o(UF2_LED_tri_o));
+        .UF2_LED_tri_o(UF2_LED_tri_o),
+        .fan_PWM(fan_PWM));
 endmodule
